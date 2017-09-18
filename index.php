@@ -29,7 +29,7 @@
                 <header id="header">
                     <h1>Hello World!</h1>
                     <div style="padding: 30px; margin: 0 auto;">
-                        <h3>DB Dump</h3>
+                        <h2>Let's take a look at the database</h2>
                         <?php
                             $servername = "localhost";
                             $username = "root";
@@ -44,7 +44,7 @@
                                     echo "id: " . $row["id"]. " - Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
                                 }
                             } else {
-                                echo "0 results";
+                                echo "The database is empty!";
                             }
                             $conn->close();
                         ?>
