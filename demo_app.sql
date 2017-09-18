@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS `people` (
 
 INSERT INTO `people` (`id`, `first_name`, `last_name`) VALUES
 (1, 'Freddy', 'Liu');
+(2, 'Freddy', 'Liu');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
