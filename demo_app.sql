@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 18, 2017 at 06:50 AM
+-- Generation Time: Sep 18, 2017 at 09:11 AM
 -- Server version: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -35,15 +35,15 @@ CREATE TABLE IF NOT EXISTS `people` (
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `people`
 --
 
 INSERT INTO `people` (`id`, `first_name`, `last_name`) VALUES
-(1, 'Freddy', 'Liu');
-(2, 'Freddy', 'Liu');
+(1, 'Freddy', 'Liu'),
+(2, 'Max', 'Karami');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
