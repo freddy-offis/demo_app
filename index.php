@@ -40,9 +40,11 @@
                             $sql = "SELECT id, first_name, last_name FROM people";
                             $result = $conn->query($sql);
                             if ($result->num_rows > 0) {
+                                echo '<table cellpadding="0" cellspacing="2" border="1">';
                                 while($row = $result->fetch_assoc()) {
-                                    echo "id: " . $row["id"]. " - Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
+                                    echo "<tr><td>" . $row["id"]. "</td><td>" . $row["first_name"]. "</td><td>" . $row["last_name"]. "</td></tr>";
                                 }
+                                echo '</table>';
                             } else {
                                 echo "The database is empty!";
                             }
