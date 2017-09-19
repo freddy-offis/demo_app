@@ -36,10 +36,11 @@
                             $dbname = "demo_app";
                             $conn = new mysqli($servername, $username, $password, $dbname);
                             if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
-                            $sql = "SELECT * FROM city LIMIT 50";
+                            $sql = "SELECT * FROM city LIMIT 20";
                             $result = $conn->query($sql);
                             if ($result->num_rows > 0) {
-                                echo '<table cellpadding="3" cellspacing="3" border="1">';
+                                echo '<table style="width:80%; margin:0 auto;" cellspacing="3" cellpadding="3" border="1">';
+                                echo '<tbody>';
                                 while($row = $result->fetch_assoc()) {
                                     echo "<tr>";
                                         echo "<td>" . $row["ID"] . "</td>";
@@ -48,6 +49,7 @@
                                         echo "<td>" . $row["Population"] . "</td>";
                                     echo "</tr>";
                                 }
+                                echo '</tbody>';
                                 echo '</table>';
                             } else {
                                 echo "The database is empty!";
