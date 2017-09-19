@@ -26,7 +26,7 @@
             <div id="main">
                 <!-- Header -->
                 <header id="header">
-                    <h1>Hello World!</h1>
+                    <h1>Ehau is loco!!!</h1>
                     <div style="padding: 30px; margin: 0 auto;">
                         <h2>Let's take a look at the cities in our database</h2>
                         <?php
@@ -43,10 +43,10 @@
                                 echo '<tbody>';
                                 while($row = $result->fetch_assoc()) {
                                     echo "<tr>";
-                                        echo "<td>" . $row["ID"] . "</td>";
-                                        echo "<td>" . $row["Name"] . "</td>";
-                                        echo "<td>" . $row["District"] . "</td>";
-                                        echo "<td>" . $row["Population"] . "</td>";
+                                    echo "<td>" . $row["ID"] . "</td>";
+                                    echo "<td>" . $row["Name"] . "</td>";
+                                    echo "<td>" . $row["District"] . "</td>";
+                                    echo "<td>" . $row["Population"] . "</td>";
                                     echo "</tr>";
                                 }
                                 echo '</tbody>';
@@ -62,7 +62,6 @@
                 <footer id="footer">
                     <span class="copyright">
                         <p>&copy; Offis Multi-Cloud</p>
-                        <p>Design: <a href="http://html5up.net">HTML5 UP</a>.</p>
                     </span>
                 </footer>
             </div>
