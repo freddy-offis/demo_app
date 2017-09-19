@@ -1,10 +1,10 @@
 <?php
     session_start();
     date_default_timezone_set('Australia/Sydney');
-    shell_exec('php get_twitter_token.php');
-    $str = file_get_contents('twitter_token.json');
-    $arr = json_decode($str, true);
-    $token = $arr['access_token'];
+    //shell_exec('php get_twitter_token.php');
+    //$str = file_get_contents('twitter_token.json');
+    //$arr = json_decode($str, true);
+    //$token = $arr['access_token'];
 ?>
     <!DOCTYPE html>
     <html lang="en">
