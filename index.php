@@ -36,7 +36,7 @@
                             $dbname = "demo_app";
                             $conn = new mysqli($servername, $username, $password, $dbname);
                             if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
-                            $sql = "SELECT TOP 50 * FROM city";
+                            $sql = "SELECT * FROM city LIMIT 50";
                             $result = $conn->query($sql);
                             if ($result->num_rows > 0) {
                                 echo '<table cellpadding="3" cellspacing="3" border="1">';
