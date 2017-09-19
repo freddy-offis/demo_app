@@ -26,7 +26,7 @@
             <div id="main">
                 <!-- Header -->
                 <header id="header">
-                    <h1>Ehau is loco!!!</h1>
+                    <h1>Microsoft Surface is shit!!!</h1>
                     <div style="padding: 30px; margin: 0 auto;">
                         <h2>Let's take a look at the cities in our database</h2>
                         <?php
