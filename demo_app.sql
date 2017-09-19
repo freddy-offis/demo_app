@@ -1,37 +1,33 @@
--- phpMyAdmin SQL Dump
--- version 4.7.0
--- https://www.phpmyadmin.net/
+-- MySQL dump 10.13  Distrib 5.1.51, for pc-linux-gnu (i686)
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 18, 2017 at 09:11 AM
--- Server version: 10.1.24-MariaDB
--- PHP Version: 7.1.6
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
+-- Host: 127.0.0.1    Database: demo_app
+-- ------------------------------------------------------
+-- Server version       5.1.51-debug-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES latin1 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Database: `demo_app`
---
-CREATE DATABASE IF NOT EXISTS `demo_app` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `demo_app`;
-
--- --------------------------------------------------------
+DROP SCHEMA IF EXISTS demo_app;
+CREATE SCHEMA demo_app;
+USE demo_app;
+SET AUTOCOMMIT=0;
 
 --
 -- Table structure for table `city`
 --
 
+DROP TABLE IF EXISTS `city`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE IF NOT EXISTS `city` (
+CREATE TABLE `city` (
   `ID` INT(11) NOT NULL AUTO_INCREMENT,
   `Name` CHAR(35) NOT NULL DEFAULT '',
   `CountryCode` CHAR(3) NOT NULL DEFAULT '',
@@ -40,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `city` (
   PRIMARY KEY (`ID`),
   KEY `CountryCode` (`CountryCode`),
   CONSTRAINT `city_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`)
-) ENGINE=InnoDB AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4080 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5420,3 +5416,5 @@ SET AUTOCOMMIT=1;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2010-09-30 11:01:37
