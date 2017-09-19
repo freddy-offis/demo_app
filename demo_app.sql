@@ -31,7 +31,7 @@ USE `demo_app`;
 
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `city` (
+CREATE TABLE IF NOT EXISTS `city` (
   `ID` INT(11) NOT NULL AUTO_INCREMENT,
   `Name` CHAR(35) NOT NULL DEFAULT '',
   `CountryCode` CHAR(3) NOT NULL DEFAULT '',
@@ -40,7 +40,7 @@ CREATE TABLE `city` (
   PRIMARY KEY (`ID`),
   KEY `CountryCode` (`CountryCode`),
   CONSTRAINT `city_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`)
-) ENGINE=InnoDB AUTO_INCREMENT=4080 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
