@@ -49,7 +49,7 @@
                                     echo "<td>" . $row["Population"] . "</td>";
                                     echo "</tr>";
                                 }
-                                echo </tbody>';
+                                echo '</tbody>';
                                 echo '</table>';
                             } else {
                                 echo "The database is empty!";
