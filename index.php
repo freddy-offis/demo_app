@@ -24,12 +24,11 @@
             <div id="bg"></div>
             <div id="overlay"></div>
             <div id="main">
-
                 <!-- Header -->
                 <header id="header">
                     <h1>Hello World!</h1>
                     <div style="padding: 30px; margin: 0 auto;">
-                        <h2>Let's take a look at the database</h2>
+                        <h2>Let's take a look at the cities in our database</h2>
                         <?php
                             $servername = "localhost";
                             $username = "root";
@@ -37,12 +36,17 @@
                             $dbname = "demo_app";
                             $conn = new mysqli($servername, $username, $password, $dbname);
                             if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
-                            $sql = "SELECT id, first_name, last_name FROM people";
+                            $sql = "SELECT TOP 50 * FROM city";
                             $result = $conn->query($sql);
                             if ($result->num_rows > 0) {
-                                echo '<table cellpadding="0" cellspacing="2" border="1" style="margin:0 auto;">';
+                                echo '<table cellpadding="3" cellspacing="3" border="1">';
                                 while($row = $result->fetch_assoc()) {
-                                    echo "<tr><td>" . $row["id"]. "</td><td>" . $row["first_name"]. "</td><td>" . $row["last_name"]. "</td></tr>";
+                                    echo "<tr>";
+                                        echo "<td>" . $row["ID"] . "</td>";
+                                        echo "<td>" . $row["Name"] . "</td>";
+                                        echo "<td>" . $row["District"] . "</td>";
+                                        echo "<td>" . $row["Population"] . "</td>";
+                                    echo "</tr>";
                                 }
                                 echo '</table>';
                             } else {
@@ -52,10 +56,12 @@
                         ?>
                     </div>
                 </header>
-
                 <!-- Footer -->
                 <footer id="footer">
-                    <span class="copyright">&copy; Offis Multi-Cloud Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+                    <span class="copyright">
+                        <p>&copy; Offis Multi-Cloud</p>
+                        <p>Design: <a href="http://html5up.net">HTML5 UP</a>.</p>
+                    </span>
                 </footer>
             </div>
         </div>
@@ -70,7 +76,6 @@
             window.onorientationchange = function() {
                 document.body.scrollTop = 0;
             }
-
             twttr.widgets.createTimeline(
                 {
                   sourceType: "profile",
@@ -85,6 +90,5 @@
                 }
             );
         </script>
-        
     </body>
-    </html>
+</html>
