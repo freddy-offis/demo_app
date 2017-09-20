@@ -26,7 +26,7 @@
             <div id="main">
                 <!-- Header -->
                 <header id="header">
-                    <h1>Hello World</h1>
+                    <h1>Hello World!</h1>
                     <div style="padding: 30px; margin: 0 auto;">
                         <h2>Let's take a look at the cities in our database</h2>
                         <?php
@@ -39,7 +39,7 @@
                             $sql = "SELECT * FROM city LIMIT 20";
                             $result = $conn->query($sql);
                             if ($result->num_rows > 0) {
-                                echo '<table style="width:80%; margin:0 auto;" cellspacing="3" cellpadding="3" border="1">';
+                                echo '<table style="width:600px; margin:0 auto;" cellspacing="3" cellpadding="3" border="1">';
                                 echo '<tbody>';
                                 while($row = $result->fetch_assoc()) {
                                     echo "<tr>";
