@@ -41,7 +41,7 @@ case "$GIT_BRANCH" in
             exit 1
         fi
         # Execute RightScript
-        /usr/bin/rsc --refreshToken $RS_OPS_ACCOUNT_TOKEN --host $RS_API_ENDPOINT --account=$RS_OPS_ACCOUNT cm15 run_executable $INSTANCE_HREF "right_script_href=$RS_OPS_ACCOUNT_SCRIPT_HREF" "inputs[][name]=APP_REPO" "inputs[][value]=text:https://github.com/freddy-offis/demo_app.git" "inputs[][name]=APP_NAME" "inputs[][value]=text:demo_app" "inputs[][name]=APP_BRANCH" "inputs[][value]=text:develop" "inputs[][name]=MYSQL_ROOT_PASSWORD" "inputs[][value]=text:root" "inputs[][name]=APP_BRANCH" "inputs[][value]=text:master" "inputs[][name]=MYSQL_APP_DB_NAME" "inputs[][value]=text:demo_app"        
+        /usr/bin/rsc --refreshToken $RS_OPS_ACCOUNT_TOKEN --host $RS_API_ENDPOINT --account=$RS_OPS_ACCOUNT cm15 run_executable $INSTANCE_HREF "right_script_href=$RS_OPS_ACCOUNT_SCRIPT_HREF" "inputs[][name]=APP_REPO" "inputs[][value]=text:https://github.com/freddy-offis/demo_app.git" "inputs[][name]=APP_NAME" "inputs[][value]=text:demo_app" "inputs[][name]=APP_BRANCH" "inputs[][value]=text:develop" "inputs[][name]=MYSQL_ROOT_PASSWORD" "inputs[][value]=text:root" "inputs[][name]=APP_BRANCH" "inputs[][value]=text:develop" "inputs[][name]=MYSQL_APP_DB_NAME" "inputs[][value]=text:demo_app"        
         ;;
     "origin/master")
         echo "!!! You are attempting to build from master branch !!!"
