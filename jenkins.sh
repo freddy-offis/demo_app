@@ -58,3 +58,4 @@ case "$GIT_BRANCH" in
     *)
         echo "Invalid branch!"
         exit 1
+esac
